@@ -8,7 +8,7 @@ services:
     deploy:
       replicas: 3
     networks:
-      - mynetwork
+      - mynet
 
   application:
     image: jagadishkumpati/firstrepo:appimage
@@ -19,8 +19,8 @@ services:
     depends_on:
       - devopsdb
     networks:
-      - mynetwork
+      - mynet
 
 networks:
-  mynetwork:
+  mynet:
     driver: overlay
