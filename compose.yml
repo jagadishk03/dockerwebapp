@@ -7,6 +7,8 @@ services:
       - "3306:3306"
     deploy:
       replicas: 3
+    networks:
+      - mynetwork
     
     
 
@@ -16,6 +18,12 @@ services:
       - "1111:8080"
     deploy:
       replicas: 3
+    networks:
+      - mynetwork
     depends_on:
       - devopsdb
+
+networks:
+  mynetwork:
+    driver: overlay
     
