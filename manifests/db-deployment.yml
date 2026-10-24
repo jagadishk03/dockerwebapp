@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: cont-1
-          image: jagadishkumpati/practice:dbimage
+          image: azregistry77.azurecr.io/db:92
           ports:
             - containerPort: 3306
       imagePullSecrets:
